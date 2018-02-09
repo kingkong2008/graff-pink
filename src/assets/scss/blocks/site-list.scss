@@ -1,0 +1,120 @@
+.site-list {
+  //min-height: 255px;
+  font-weight: bold;
+}
+.site-list a {
+  display: block;
+  padding: 12px 21px;
+  padding-bottom: 13px;
+
+  font-family: "Segoe UI", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  //text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: $bg-pinkmiddle;
+  border-top: 1px solid $bg-pinkdark;
+  border-bottom: 1px solid $bg-pinksemilight;
+}
+.site-list a[href] {
+  &:hover {
+    background-color: $bg-pinkdark;
+    border-top-color: $bg-pinkdark;
+  }
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: $bg-pink;
+    border-top-color: $bg-pink;
+  }
+}
+@media (min-width: $tablet-width) {
+  .site-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    width: 330px;
+  }
+  .site-list__item {
+    margin-right: 32px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+    &--active {
+      position: relative;
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        right: 0;
+        bottom: -3px;
+        left: 0;
+
+        height: 3px;
+
+        background: $bg-pinkmiddle;
+      }
+    }
+  }
+  .site-list__item a {
+    padding: 0;
+    padding-top: 32px;
+    padding-bottom: 30px;
+
+    font-size: 17px;
+    line-height: 24px;
+    color: #454545;
+    opacity: 0.75;
+    background: none;
+    border: none;
+  }
+  .site-list__item a[href] {
+    &:hover {
+      color: $bg-pinkmiddle;
+
+      background-color: transparent;
+    }
+    &:active {
+      color: #ffffff;
+
+      background-color: #000000;
+      opacity: 0.3;
+    }
+  }
+}
+@media (min-width: $desktop-width) {
+  .site-list {
+    width: 376px;
+    margin-left: auto;
+
+  }
+  .site-list__item {
+    margin-right: 0;
+
+    &--active::after {
+      right: 18px;
+      left: 18px;
+    }
+  }
+  .site-list__item a{
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+  .site-list__item a[href] {
+    &:hover {
+      color: #000000;
+
+      background-color: rgba(255, 156, 180, 0.4);
+    }
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+
+      background-color: #ffffff;
+      opacity: 1;
+    }
+  }
+}

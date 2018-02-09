@@ -1,0 +1,29 @@
+.button {
+  display: inline-block;
+  padding: 10px 30px;
+  margin-right: 16px;
+
+  font: inherit;
+  line-height: 18px;
+
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: $bg-pinksemilight;
+  border: none;
+  
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $bg-pinkdark;
+  }
+  &.disabled,
+  &:disabled {
+    cursor: default;
+    opacity: 0.5;
+    background-color: #000000;
+  }
+
+}

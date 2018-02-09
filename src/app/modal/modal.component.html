@@ -1,0 +1,44 @@
+<section class="modal modal--search modal--open">
+  <h2>Search form</h2>
+  <p class="modal__description">Please select s search option:</p>
+  <form class="modal__form" (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <p class="modal__checkbox-group">
+      <label class="modal__checkbox">
+        <input class="visually-hidden"
+               type="checkbox"
+               name="by_album"
+               [ngModel]="byNumber"
+               (ngModelChange)="selectNumber($event)">
+        <span class="modal__checkbox-indicator"></span>
+        By Album number
+      </label>
+      <label class="modal__checkbox">
+        <input class="visually-hidden"
+               type="checkbox"
+               name="by_photo"
+               [ngModel]="byId"
+               (ngModelChange)="selectId($event)">
+        <span class="modal__checkbox-indicator"></span>
+        By Album ID
+      </label>
+    </p>
+    <p *ngIf="byNumber">
+      <label class="visually-hidden" for="album-number">Select Album number</label>
+      <select id="album-number"
+              name="album_number"
+              ngModel>
+        <option *ngFor="let i of albumNumbers" value="{{ i }}">Album number "{{ i }}"</option>
+      </select>
+    </p>
+    <p *ngIf="byId">
+      <label class="visually-hidden" for="photo-id">Type Album ID</label>
+      <input id="photo-id"
+             type="number"
+             name="photo_id"
+             placeholder="1"
+             ngModel>
+    </p>
+    <button class="button" type="submit">Submit</button>
+  </form>
+  <button class="modal__close" type="button" (click)="onClose()">Close</button>
+</section>

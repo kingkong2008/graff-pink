@@ -1,0 +1,60 @@
+@font-face {
+  font-weight: normal;
+  font-family: "Lavanderia";
+  font-style: normal;
+  src: url(assets/fonts/lavanderia_regular.woff2) format("woff2"),
+       url(assets/fonts/lavanderia_regular.woff) format("woff");
+}
+@font-face {
+  font-weight: bold;
+  font-family: "Lavanderia";
+  font-style: normal;
+  src: url(assets/fonts/lavanderia_sturdy.woff2) format("woff2"),
+       url(assets/fonts/lavanderia_sturdy.woff) format("woff");
+}
+@font-face {
+  font-weight: normal;
+  font-family: "Segoe UI";
+  font-style: normal;
+  src: url(assets/fonts/segoe_ui.woff2) format("woff2"),
+       url(assets/fonts/segoe_ui.woff) format("woff");
+}
+@font-face {
+  font-weight: normal;
+  font-family: "Univers Lt";
+  font-style: normal;
+  src: url(assets/fonts/univers_lt.woff2) format("woff2"),
+       url(assets/fonts/univers_lt.woff) format("woff");
+}
+@font-face {
+  font-weight: bold;
+  font-family: "Univers Lt";
+  font-style: normal;
+  src: url(assets/fonts/univers_lt_bold.woff2) format("woff2"),
+       url(assets/fonts/univers_lt_bold.woff) format("woff");
+}
+@font-face {
+  font-weight: bold;
+  font-family: "Alte Haas Grotesk";
+  font-style: normal;
+  src: url(assets/fonts/altehaas_bold.woff2) format("woff2"),
+  url(assets/fonts/altehaas_bold.woff) format("woff");
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+
+  font-size: 15px;
+  line-height: 22px;
+  font-family: "Univers Lt", "Arial", sans-serif;
+  color: #404040;
+  font-style: normal;
+
+  background-color: #ffffff;
+}
+img {
+  width: 100%;
+  height: auto;
+}

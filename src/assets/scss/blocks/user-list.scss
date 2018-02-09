@@ -1,0 +1,129 @@
+.user-list__login {
+  position: relative;
+
+  display: block;
+  padding: 17px 21px;
+  padding-left: 49px;
+
+  font-family: "Segoe UI", "Arial", sans-serif;
+  line-height: 18px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.user-list__login-icon {
+  position: absolute;
+  top: 17px;
+  left: 21px;
+
+  width: 16px;
+  height: 16px;
+
+  opacity: 0.3;
+
+  path {
+    fill: #ffffff;
+  }
+}
+@media (min-width: $tablet-width) {
+  .user-list {
+    width: 60px;
+  }
+  .user-list__login {
+    width: 60px;
+    height: 86px;
+    padding: 0;
+
+    font-size: 0;
+
+    &:hover .user-list__login-icon {
+      opacity: 1;
+
+      path {
+        fill: $bg-pinkmiddle;
+      }
+    }
+
+    &:active .user-list__login-icon {
+      opacity: 0.3;
+
+      path {
+        color: #ffffff;
+      }
+    }
+  }
+  .user-list__login-icon {
+    top: 37px;
+    left: 12px;
+
+    path {
+      fill: black;
+    }
+  }
+}
+@media (min-width: $desktop-width) {
+  .user-list {
+    display: flex;
+    align-items: center;
+
+    margin-left: 20px;
+
+    width: auto;
+    max-width: 160px;
+  }
+  .user-list__login {
+    position: relative;
+
+    width: auto;
+    height: auto;
+
+    background-color: #de6d6e;
+
+    border-radius: 3px;
+
+    width: auto;
+    height: auto;
+    padding-top: 2px;
+    padding-right: 15px;
+    padding-bottom: 6px;
+    padding-left: 30px;
+
+    font-size: 17px;
+    line-height: 24px;
+    color: #ffffff;
+    font-weight: bold;
+    //text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      color: #000000;
+
+      background-color: rgba(255, 156, 180, 0.4);
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+
+      background-color: #ffffff;
+    }
+    &:hover .user-list__login-icon {
+      opacity: 0.3;
+
+      path {
+        fill: #000000;
+      }
+    }
+    &:active .user-list__login-icon {
+      opacity: 0.1;
+    }
+  }
+  .user-list__login-icon {
+    top: 8px;
+    left: 10px;
+
+    opacity: 0.8;
+
+    path {
+      fill: #ffffff;
+    }
+  }
+}

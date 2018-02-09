@@ -1,0 +1,33 @@
+<section class="news">
+  <h2 class="visually-hidden">News</h2>
+  <p class="news__not-found" *ngIf="albumsNotFound">Sorry, album not found...</p>
+  <ul class="news__list" *ngIf="!albumsNotFound">
+    <li class="news__item" *ngFor="let album of albums">
+      <a class="news__picture"
+         [href]=album.url>
+        <!--<img class="news__image" src="../../assets/img/item.jpg" width="199" height="132" alt="Photo for news one">-->
+        <img class="news__image"
+             width="199"
+             height="132"
+             alt="Photo for news one"
+             [src]=album.thumbnailUrl>
+      </a>
+      <div class="news__text">
+        <h3>{{ album.title }}</h3>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+          been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+          galley of type and scrambled it to make a type specimen book. It has survived not only five
+          centuries, but also the leap into electronic typesetting, remaining essentially
+          unchanged.</p>
+      </div>
+    </li>
+  </ul>
+  <div class="news__show-more">
+    <button class="news__show-more button"
+            type="button"
+            (click)="showMore()"
+            *ngIf="(allAlbums.length > albumsPerPage) && !albumsNotFound">
+      Show more...
+    </button>
+  </div>
+</section>
